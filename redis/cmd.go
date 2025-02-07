@@ -85,6 +85,11 @@ func Append(ctx context.Context, key, value string) *IntCmd {
 	return rdb.Append(ctx, key, value)
 }
 
+// Del Del
+func Del(ctx context.Context, keys ...string) *IntCmd {
+	return rdb.Del(ctx, keys...)
+}
+
 //------------------------------------------------------------------------------
 
 // Scan Scan
