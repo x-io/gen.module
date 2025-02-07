@@ -1,4 +1,4 @@
-package adapter
+package rediscache
 
 import (
 	"context"
@@ -14,7 +14,7 @@ type CacheRides struct {
 }
 
 // Init connects to the database.
-func Rides(uri, password string, db int) *CacheRides {
+func Init(uri, password string, db int) *CacheRides {
 	return &CacheRides{
 		conn: redis.NewClient(&redis.Options{
 			Addr:     uri,

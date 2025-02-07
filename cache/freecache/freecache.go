@@ -1,4 +1,4 @@
-package adapter
+package freecache
 
 import (
 	"time"
@@ -13,7 +13,7 @@ type CacheFree struct {
 }
 
 // Init connects to the database.
-func FreeCache(size int) *CacheFree {
+func Init(size int) *CacheFree {
 	return &CacheFree{
 		conn: freecache.NewCache(size),
 	}
