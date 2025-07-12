@@ -41,6 +41,9 @@ func GetOperator(c *gen.Context) *dbs.Operator {
 			d.Name = dbs.String(vv.(string))
 		}
 
+		if vv, ok := v["depot"]; ok {
+			d.Depot = dbs.String(vv.(string))
+		}
 		return &d
 	}
 	return nil

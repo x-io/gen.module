@@ -14,7 +14,7 @@ type CacheRides struct {
 }
 
 // Init connects to the database.
-func Init(uri, password string, db int) *CacheRides {
+func CacheInit(uri, password string, db int) *CacheRides {
 	return &CacheRides{
 		conn: redis.NewClient(&redis.Options{
 			Addr:     uri,
