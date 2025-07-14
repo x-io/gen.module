@@ -6,9 +6,9 @@ import (
 
 var conn *nats.Conn
 
-//Init Init
-func Init(url string) error {
-	nc, err := nats.Connect(url)
+// Init Init
+func Init(c *Config) error {
+	nc, err := nats.Connect(c.URI)
 	if err != nil {
 		return err
 	}
