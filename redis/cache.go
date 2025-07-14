@@ -14,12 +14,12 @@ type CacheRides struct {
 }
 
 // Init connects to the database.
-func CacheInit(uri, password string, db int) *CacheRides {
+func CacheInit(c *Config) *CacheRides {
 	return &CacheRides{
 		conn: redis.NewClient(&redis.Options{
-			Addr:     uri,
-			Password: password, // no password set
-			DB:       db,       // use default DB
+			Addr:     c.Host,
+			Password: c.Password, // no password set
+			DB:       c.DB,       // use default DB
 		}),
 	}
 }
