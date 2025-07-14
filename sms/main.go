@@ -1,10 +1,11 @@
 package sms
 
 import (
-	"G/module/sms/adapter/wangjian"
-	"G/module/sms/adapter/yunxin"
-	"G/module/sms/core"
 	"log"
+
+	"github.com/x-io/gen.module/sms/adapter/wangjian"
+	"github.com/x-io/gen.module/sms/adapter/yunxin"
+	"github.com/x-io/gen.module/sms/core"
 )
 
 var _default string

@@ -1,7 +1,6 @@
 package yunxin
 
 import (
-	"G/module/sms/core"
 	"encoding/xml"
 	"fmt"
 	"io"
@@ -9,6 +8,8 @@ import (
 	"net/url"
 	"strconv"
 	"strings"
+
+	"github.com/x-io/gen.module/sms/core"
 )
 
 type engine struct {

@@ -1,13 +1,14 @@
 package wangjian
 
 import (
-	"G/module/sms/core"
 	"fmt"
 	"io"
 	"net/http"
 	"net/url"
 	"strconv"
 	"strings"
+
+	"github.com/x-io/gen.module/sms/core"
 )
 
 //https://utf8api.smschinese.cn/?Uid=本站用户名&Key=接口安全秘钥&smsMob=手机号码&smsText=验证码:8888
