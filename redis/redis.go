@@ -9,12 +9,12 @@ import (
 var rdb *RS.Client
 
 // Init connects to the database.
-func Init(uri, password string, db int) error {
+func Init(c *Config) error {
 
 	rdb = RS.NewClient(&RS.Options{
-		Addr:     uri,
-		Password: password, // no password set
-		DB:       db,       // use default DB
+		Addr:     c.Host,
+		Password: c.Password, // no password set
+		DB:       c.DB,       // use default DB
 	})
 
 	return nil
